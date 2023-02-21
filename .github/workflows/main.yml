@@ -34,3 +34,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  
+  terraform_plan:
+    runs-on: ubuntu-latest
+    steps:
+     - name: terraform plan job
+       run: |
+        terraform init
+        terraform plan

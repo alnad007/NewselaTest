@@ -39,7 +39,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: terraform plan job
+       working-directory: ./NewselaTest
        run: |
-        cd ./NewselaTest
         terraform init -upgrade
         terraform plan

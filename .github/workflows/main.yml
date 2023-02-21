@@ -40,5 +40,6 @@ jobs:
     steps:
      - name: terraform plan job
        run: |
-        terraform init
+        cd NewselaTest
+        terraform init -upgrade
         terraform plan

@@ -39,7 +39,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: terraform plan job
-       working-directory: ./terraform
        run: |
         terraform init -upgrade
         terraform plan

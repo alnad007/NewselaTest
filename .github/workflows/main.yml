@@ -39,6 +39,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: terraform plan job
+       working-directory: ./terraform
        run: |
         terraform init -upgrade
         terraform plan
+    env:
+      aws_access_key: ${{secrets.AWS_ACCESS_KEY}}
+      aws_secret_access_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
